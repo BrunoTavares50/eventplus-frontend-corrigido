@@ -1,15 +1,222 @@
-.container-eventos{
-    width: 80%;
-    max-width: 1200px;
+.pagina-eventos {
+    width: min(1120px, calc(100% - 48px));
     margin: 0 auto;
+    padding: 48px 0 72px;
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+.eventos-secao-titulo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 40px;
+}
+
+.eventos-secao-titulo h1,
+.eventos-secao-titulo h2 {
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--cor-texto);
+}
+
+.eventos-secao-titulo hr {
+    width: 140px;
+    border: 0;
+    border-top: 2px solid var(--cor-primaria);
+}
+
+.admin-evento-section {
+    width: 100%;
+}
+
+.admin-evento-conteudo {
+    display: grid;
+    grid-template-columns: minmax(280px, 440px) minmax(320px, 460px);
+    justify-content: center;
+    align-items: center;
+    gap: 56px;
+}
+
+.admin-evento-ilustracao {
+    width: 100%;
+    max-width: 440px;
+    margin: 0 auto;
+}
+
+.admin-evento-formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    width: 100%;
+}
+
+.admin-evento-linha-dupla {
+    display: grid;
+    grid-template-columns: 1.25fr 1fr;
+    gap: 20px;
+    align-items: end;
+}
+
+.admin-evento-campo-grupo {
+    width: 100%;
+}
+
+.admin-evento-campo-data {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.admin-evento-icone-relogio {
+    width: 22px;
+    height: 22px;
+    flex-shrink: 0;
+}
+
+.admin-evento-campo-data .campo {
+    font-size: 0.9rem;
+    color: #9e9698;
+}
+
+.admin-evento-select-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.admin-evento-select {
+    width: 100%;
+    min-height: 44px;
+    padding: 10px 28px 7px 4px;
+    border: 0;
+    border-bottom: 1px solid #201e1f;
+    background: transparent;
+    color: var(--cor-texto);
+    font-size: 0.95rem;
+    outline: none;
+    appearance: none;
+    cursor: pointer;
+}
+
+.admin-evento-select.placeholder {
+    color: #b8afb1;
+}
+
+.admin-evento-select option {
+    color: var(--cor-texto);
+}
+
+.admin-evento-select:focus {
+    border-bottom-color: var(--cor-primaria);
+    box-shadow: 0 1px 0 var(--cor-primaria);
+}
+
+.admin-evento-select-seta {
+    position: absolute;
+    right: 4px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #151515;
+    color: #ffffff;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.85rem;
+    line-height: 1;
+    pointer-events: none;
+}
+
+.admin-evento-upload {
+    width: 100%;
+    min-height: 44px;
+    padding: 10px 4px 7px;
+    border-bottom: 1px solid #201e1f;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    cursor: pointer;
+}
+
+.admin-evento-upload input[type="file"] {
+    display: none;
+}
+
+.admin-evento-upload-texto {
+    color: #b8afb1;
+    font-size: 0.95rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.admin-evento-upload-texto.selecionado {
+    color: var(--cor-texto);
+}
+
+.admin-evento-icone-upload {
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+}
+
+.admin-evento-botao {
+    width: 100%;
+    margin-top: 6px;
+    border-radius: 6px;
+}
+
+.admin-evento-mensagem {
+    font-size: 0.9rem;
+    color: var(--cor-primaria);
+    text-align: center;
+}
+
+.container-eventos {
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.eventos{
+.eventos {
     width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 260px));
+    justify-content: space-between;
+    gap: 40px;
+}
+
+@media (max-width: 860px) {
+    .admin-evento-conteudo {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+
+    .admin-evento-linha-dupla {
+        grid-template-columns: 1fr;
+    }
+
+    .eventos {
+        justify-content: center;
+    }
 }

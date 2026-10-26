@@ -1,0 +1,245 @@
+.cadastro-usuario-page {
+    display: flex;
+    flex-direction: column;
+    gap: 56px;
+    padding-bottom: 64px;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+.cadastro-usuario-formulario-section,
+.tipo-usuario-section {
+    width: min(1120px, calc(100% - 48px));
+    margin: 0 auto;
+    padding-top: 48px;
+}
+
+.usuario-secao-titulo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 40px;
+}
+
+.section-title {
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--cor-texto);
+}
+
+.usuario-secao-titulo hr {
+    width: 140px;
+    border: 0;
+    border-top: 2px solid var(--cor-primaria);
+}
+
+.cadastro-usuario-conteudo {
+    display: grid;
+    grid-template-columns: minmax(280px, 440px) minmax(320px, 460px);
+    justify-content: center;
+    align-items: center;
+    gap: 56px;
+}
+
+.cadastro-usuario-ilustracao {
+    width: 100%;
+    max-width: 440px;
+    margin: 0 auto;
+}
+
+.cadastro-usuario-formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+}
+
+.cadastro-usuario-formulario h2 {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--cor-texto);
+}
+
+.cadastro-usuario-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    align-items: end;
+}
+
+.cadastro-usuario-select-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.cadastro-usuario-select {
+    width: 100%;
+    min-height: 44px;
+    padding: 10px 28px 7px 4px;
+    border: 0;
+    border-bottom: 1px solid #201e1f;
+    background: transparent;
+    color: var(--cor-texto);
+    font-size: 0.95rem;
+    outline: none;
+    appearance: none;
+    cursor: pointer;
+}
+
+.cadastro-usuario-select:focus {
+    border-bottom-color: var(--cor-primaria);
+    box-shadow: 0 1px 0 var(--cor-primaria);
+}
+
+.cadastro-usuario-select-seta {
+    position: absolute;
+    right: 4px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #151515;
+    color: #ffffff;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.85rem;
+    line-height: 1;
+    pointer-events: none;
+}
+
+.cadastro-usuario-cancelar {
+    min-height: 42px;
+    padding: 8px 18px;
+    border: 1px solid var(--cor-primaria);
+    border-radius: 4px;
+    background: transparent;
+    color: var(--cor-primaria);
+    cursor: pointer;
+}
+
+.cadastro-usuario-mensagem {
+    font-size: 0.9rem;
+    color: var(--cor-primaria);
+    text-align: center;
+}
+
+.lista-tipos {
+    background: var(--cor-primaria);
+    color: #ffffff;
+    padding: 48px 0;
+}
+
+.lista-tipos-conteudo {
+    width: min(1120px, calc(100% - 48px));
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.lista-tipos-conteudo h2 {
+    text-align: center;
+    font-size: 1.05rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+.lista-tipos-tabela-wrapper {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.lista-usuarios-tabela {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.lista-usuarios-tabela th,
+.lista-usuarios-tabela td {
+    padding: 14px 16px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.tipo-usuario-section .lista-usuarios-tabela th,
+.tipo-usuario-section .lista-usuarios-tabela td {
+    border-bottom: 1px solid var(--cor-borda);
+    color: var(--cor-texto);
+}
+
+.lista-tipos-linha-ativa {
+    background: rgba(255, 255, 255, 0.14);
+}
+
+.tipo-usuario-section .lista-tipos-linha-ativa {
+    background: var(--cor-primaria-suave);
+}
+
+.lista-tipos-tabela-vazia {
+    text-align: center;
+    padding: 24px;
+}
+
+.lista-tipos-acao {
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+    padding: 4px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.lista-tipos .lista-tipos-acao img {
+    width: 20px;
+    height: 20px;
+    filter: brightness(0) invert(1);
+}
+
+.tipo-usuario-section .lista-tipos-acao img {
+    width: 20px;
+    height: 20px;
+}
+
+.tipo-usuario-formulario {
+    max-width: 680px;
+    margin: 0 auto 36px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.tipo-usuario-linha {
+    display: grid;
+    grid-template-columns: 1fr auto auto;
+    gap: 16px;
+    align-items: end;
+}
+
+@media (max-width: 860px) {
+    .cadastro-usuario-conteudo {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+
+    .cadastro-usuario-grid,
+    .tipo-usuario-linha {
+        grid-template-columns: 1fr;
+    }
+}

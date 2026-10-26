@@ -36,6 +36,16 @@ export interface Evento {
     idInstituicaoNavigation?: instituicao | null;
 }
 
+export interface EventoPayload {
+    nomeEvento: string;
+    descricao: string;
+    dataEvento: string;
+    idTipoEvento?: string | null;
+    idInstituicao?: string | null;
+    arquivoImagem?: File | null;
+    imagemUrl?: string;
+}
+
 export interface Comentario {
     idComentario: string;
     descricao: string;
@@ -69,7 +79,7 @@ export interface AuthSession extends LoginResponse {
     usuario: Usuario;
 }
 
-export interface UsuarioPayload{
+export interface UsuarioPayload {
     nome: string;
     email: string;
     senha: string;

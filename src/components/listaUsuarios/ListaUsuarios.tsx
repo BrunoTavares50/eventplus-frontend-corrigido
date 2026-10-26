@@ -2,9 +2,6 @@ import type { Usuario } from "../../types/api";
 
 import lapis from "../../assets/icons/lapis.svg"
 import lixeira from "../../assets/icons/lixeira.svg"
-import ModalConfirmacao from "../modalConfirmacao/ModalConfirmacao";
-import Footer from "../footer/Footer";
-import Header from "../header/Header";
 
 interface ListarUsuariosProps {
     usuarios: Usuario[];

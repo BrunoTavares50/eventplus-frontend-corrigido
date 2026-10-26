@@ -10,7 +10,7 @@ function Carrossel(){
         id="carrosselEventPlus"
         className="carousel slide"
         data-bs-ride="carousel"
-        data-bs-interval="10000"
+        data-bs-interval="7000"
         >
 
             <div className="carousel-inner">
